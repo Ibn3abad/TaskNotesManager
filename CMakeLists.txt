@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(TaskNotesManager VERSION 0.8 LANGUAGES CXX)
+project(TaskNotesManager VERSION 0.9 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -63,8 +63,8 @@ set_target_properties(appTaskNotesManager PROPERTIES
     WIN32_EXECUTABLE TRUE
 
     # Android package metadata. Qt uses these only when building with an Android Qt kit.
-    QT_ANDROID_VERSION_CODE 8
-    QT_ANDROID_VERSION_NAME "0.8.0"
+    QT_ANDROID_VERSION_CODE 9
+    QT_ANDROID_VERSION_NAME "0.9.0"
     QT_ANDROID_MIN_SDK_VERSION 26
 )
 
