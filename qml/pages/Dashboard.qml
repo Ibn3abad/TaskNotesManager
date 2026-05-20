@@ -1,7 +1,7 @@
 /**
  * @author     A. KHOUK
  * @date       12.09.2024
- * @version    0.8
+ * @version    0.9
  * @copyright  Copyright (c) 2026, A. KHOUK.
  * @license    MIT licence
  */
@@ -10,6 +10,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import TaskNotesManager
+import "../components"
 
 Item {
     id: root

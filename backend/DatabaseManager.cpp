@@ -1,7 +1,7 @@
 /**
  * @author     A. KHOUK
  * @date       12.09.2024
- * @version    0.8
+ * @version    0.9
  * @copyright  Copyright (c) 2026, A. KHOUK.
  * @license    MIT licence
  */
@@ -27,6 +27,10 @@ DatabaseManager::~DatabaseManager()
     if (m_database.isValid()) {
         m_database.close();
     }
+
+    // Release this QSqlDatabase handle before removing the named connection.
+    // Otherwise Qt warns that the connection is still in use.
+    m_database = QSqlDatabase();
     QSqlDatabase::removeDatabase(m_connectionName);
 }
 

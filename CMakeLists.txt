@@ -10,7 +10,7 @@ set(QT_QML_GENERATE_QMLLS_INI ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Quick Qml QuickControls2 Sql)
 
-qt_standard_project_setup(REQUIRES 6.5)
+qt_standard_project_setup(REQUIRES 6.2)
 
 qt_add_executable(appTaskNotesManager
     main.cpp
@@ -35,6 +35,23 @@ qt_add_qml_module(appTaskNotesManager
         qml/components/TaskList.qml
         qml/components/TaskCard.qml
         qml/components/NoteEditor.qml
+        qml/components/AboutDialog.qml
+        qml/pages/Dashboard.qml
+        qml/pages/SettingsPage.qml
+)
+
+# Extra QML resource bundle for older Qt 6 versions where loadFromModule()
+# is not available or qt_add_qml_module uses a different internal path.
+# This guarantees that qrc:/qml/Main.qml exists.
+qt_add_resources(appTaskNotesManager app_qml_resources
+    PREFIX "/"
+    FILES
+        qml/Main.qml
+        qml/components/Sidebar.qml
+        qml/components/TaskList.qml
+        qml/components/TaskCard.qml
+        qml/components/NoteEditor.qml
+        qml/components/AboutDialog.qml
         qml/pages/Dashboard.qml
         qml/pages/SettingsPage.qml
 )

@@ -1,7 +1,7 @@
 /**
  * @author     A. KHOUK
  * @date       12.09.2024
- * @version    0.8
+ * @version    0.9
  * @copyright  Copyright (c) 2026, A. KHOUK.
  * @license    MIT licence
  */
@@ -11,6 +11,8 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Window
 import TaskNotesManager
+import "components"
+import "pages"
 
 ApplicationWindow {
     id: root
@@ -31,35 +33,7 @@ ApplicationWindow {
         onAboutRequested: aboutDialog.open()
     }
 
-    Dialog {
+    AboutDialog {
         id: aboutDialog
-        modal: true
-        title: i18n.language !== "" ? i18n.text("aboutTitle") : ""
-        standardButtons: Dialog.Close
-        anchors.centerIn: parent
-        width: Math.min(parent.width - 32, 560)
-
-        contentItem: ColumnLayout {
-            spacing: 14
-            Label {
-                text: "TaskNest"
-                font.pixelSize: 28
-                font.bold: true
-                color: "#f8fafc"
-                Layout.fillWidth: true
-            }
-            Label {
-                text: i18n.language !== "" ? i18n.text("aboutText") : ""
-                color: "#cbd5e1"
-                wrapMode: Text.WordWrap
-                Layout.fillWidth: true
-            }
-        }
-
-        background: Rectangle {
-            color: "#111827"
-            border.color: "#334155"
-            radius: 14
-        }
     }
 }

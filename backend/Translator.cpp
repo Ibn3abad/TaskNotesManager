@@ -1,7 +1,7 @@
 /**
  * @author     A. KHOUK
  * @date       12.09.2024
- * @version    0.8
+ * @version    0.9
  * @copyright  Copyright (c) 2026, A. KHOUK.
  * @license    MIT licence
  */
@@ -56,7 +56,14 @@ Translator::Translator(QObject *parent)
         {"language", "Sprache"},
         {"about", "Über"},
         {"aboutTitle", "Über TaskNest"},
-        {"aboutText", "TaskNest ist ein lokaler Task & Notes Manager auf Basis von C++, Qt Quick und SQLite.\n\nVersion: 0.8\nLizenz: MIT\nEntwickler: Ibn Abad Obayda\nGitHub: https://github.com/Ibn3abad/TaskNotesManager"},
+        {"aboutText",
+         "TaskNest ist ein lokaler Task & Notes Manager auf Basis von C++, Qt Quick und SQLite.<br><br>"
+         "Version: 0.9<br>"
+         "Lizenz: MIT<br>"
+         "Entwickler: A. Khouk<br>"
+         "GitHub: <a href=\"https://github.com/Ibn3abad/TaskNotesManager\">https://github.com/Ibn3abad/TaskNotesManager</a>"
+        },
+        {"openGithub", "GitHub öffnen"},
         {"close", "Schließen"},
         {"low", "Niedrig"},
         {"medium", "Mittel"},
@@ -110,7 +117,14 @@ Translator::Translator(QObject *parent)
         {"language", "Language"},
         {"about", "About"},
         {"aboutTitle", "About TaskNest"},
-        {"aboutText", "TaskNest is a local Task & Notes Manager built with C++, Qt Quick and SQLite.\n\nVersion: 0.8\nLicense: MIT\nDeveloper: Ibn Abad Obayda\nGitHub: https://github.com/Ibn3abad/TaskNotesManager"},
+        {"aboutText",
+         "TaskNest is a local Task & Notes Manager built with C++, Qt Quick and SQLite.<br><br>"
+         "Version: 0.9<br>"
+         "License: MIT<br>"
+         "Developer: A. Khouk<br>"
+         "GitHub: <a href=\"https://github.com/Ibn3abad/TaskNotesManager\">https://github.com/Ibn3abad/TaskNotesManager</a>"
+        },
+        {"openGithub", "Open GitHub"},
         {"close", "Close"},
         {"low", "Low"},
         {"medium", "Medium"},
@@ -164,7 +178,14 @@ Translator::Translator(QObject *parent)
         {"language", "اللغة"},
         {"about", "حول"},
         {"aboutTitle", "حول TaskNest"},
-        {"aboutText", "TaskNest هو مدير مهام وملاحظات محلي مبني باستخدام C++ و Qt Quick و SQLite.\n\nالإصدار: 0.8\nالرخصة: MIT\nالمطور: Ibn Abad Obayda\nGitHub: https://github.com/Ibn3abad/TaskNotesManager"},
+        {"aboutText",
+         "TaskNest هو مدير مهام وملاحظات محلي مبني باستخدام C++ و Qt Quick و SQLite.<br><br>"
+         "الإصدار: 0.9<br>"
+         "الرخصة: MIT<br>"
+         "المطور: A. Khouk<br>"
+         "GitHub: <a href=\"https://github.com/Ibn3abad/TaskNotesManager\">https://github.com/Ibn3abad/TaskNotesManager</a>"
+        },
+        {"openGithub", "فتح GitHub"},
         {"close", "إغلاق"},
         {"low", "منخفضة"},
         {"medium", "متوسطة"},

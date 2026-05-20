@@ -1,15 +1,17 @@
 /**
  * @author     A. KHOUK
  * @date       12.09.2024
- * @version    0.8
+ * @version    0.9
  * @copyright  Copyright (c) 2026, A. KHOUK.
  * @license    MIT licence
  */
+
 
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
+#include <QUrl>
 
 #include "backend/DatabaseManager.h"
 #include "backend/TaskModel.h"
@@ -42,14 +44,13 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("databaseManager", &database);
     engine.rootContext()->setContextProperty("i18n", &translator);
 
-    QObject::connect(
-        &engine,
-        &QQmlApplicationEngine::objectCreationFailed,
-        &app,
-        []() { QCoreApplication::exit(-1); },
-        Qt::QueuedConnection);
+    const QUrl mainQmlUrl(QStringLiteral("qrc:/qml/Main.qml"));
+    engine.load(mainQmlUrl);
 
-    engine.loadFromModule("TaskNotesManager", "Main");
+    if (engine.rootObjects().isEmpty()) {
+        qWarning() << "Could not load QML from" << mainQmlUrl;
+        return -1;
+    }
 
     return app.exec();
 }
